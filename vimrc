@@ -1,11 +1,12 @@
 set nocompatible
 
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_map = '<NOP>'
+let g:airline#extensions#whitespace#enabled = 0
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-let g:airline#extensions#whitespace#enabled = 0
-" let Vundle manage Vundle
-" required! 
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/bufmru.vim'
 Bundle 'kien/ctrlp.vim'
@@ -15,6 +16,8 @@ Bundle 'chriskempson/base16-vim'
 Bundle 'ervandew/supertab'
 Bundle 'kshenoy/vim-signature'
 Bundle 'bling/vim-airline'
+Bundle 'kana/vim-arpeggio'
+Bundle 'kana/vim-altr'
 
 set laststatus=2
 set dir=~/.vim_swapfiles
@@ -22,6 +25,9 @@ set backupdir=~/.vim_bufiles
 set undodir=~/.vim_undofiles
 set undofile
 
+call altr#define('%.ml', '%.mli')
+call arpeggio#map('n', '', 0, 'jo', ':CtrlP<CR>')
+call arpeggio#map('n', '', 0, 'gh', ':call altr#forward()<CR>')
 
 if has("gui_running")
 	colo evening
