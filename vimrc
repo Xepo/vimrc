@@ -77,8 +77,6 @@ set switchbuf=useopen
 "Mouse behavior
 :behave xterm
 
-:command! Diff vsp | diffthis | wincmd w | bn | diffthis 
-
 highlight StatusLine guibg=black guifg=pink ctermfg=black ctermbg=green cterm=NONE
 highlight StatusLineNC guibg=black guifg=lightblue ctermfg=black ctermbg=green cterm=NONE
 
@@ -102,7 +100,7 @@ let g:ctrlp_user_command = 'find %s -type f'
 vmap < <gv
 vmap > >gv
 
-map <CR> :w<CR>
+nnoremap <CR> :w<CR>
 
 map <C-j> <PageDown>
 map <C-k> <PageUp>
