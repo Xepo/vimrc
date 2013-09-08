@@ -18,6 +18,7 @@ Bundle 'kshenoy/vim-signature'
 Bundle 'bling/vim-airline'
 Bundle 'kana/vim-arpeggio'
 Bundle 'kana/vim-altr'
+Bundle 'kchmck/vim-coffee-script'
 
 set laststatus=2
 set dir=~/.vim_swapfiles
